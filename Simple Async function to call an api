@@ -1,0 +1,8 @@
+ let fetch=require('node-fetch')
+ 
+  async function getapi(){
+    let res = await fetch(`https://openweathermap.org/data/2.5/forecast/?appid=b6907d289e10d714a6e88b30761fae22&id=1277333&units=metric`); //your api here
+    data =await res.json()
+    return data
+  }
+  getapi().then(item=>console.log(item)).catch(er=>console.log(er))
